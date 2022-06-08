@@ -16,7 +16,8 @@ class TodoList {
     let mySubstring;
     let collectChar = '';
     const limit = 20;
-    console.log('');
+
+
     if (myTodoList.length > 1) {
 
       for (let i = 0; i < myTodoList.length; i++) {
@@ -33,8 +34,12 @@ class TodoList {
       mySubstring = collectChar.substring(0,limit);
      
       mySubstring=mySubstring+'...';
-      console.log('mySubstring '+mySubstring+ mySubstring.length);
+      console.log('mySubstring '+mySubstring+' lenght :'+ mySubstring.length);
 
+    }else{
+
+      mySubstring=myTodoList[0].text;
+      console.log('mySubstring '+mySubstring);
     }
     return mySubstring;
 
@@ -68,9 +73,9 @@ class TodoList {
 }
 const myTodoList = new TodoList();
 myTodoList.create("Shopping");
-myTodoList.create("Laudry");
-myTodoList.create("gardenning");
-myTodoList.create("go to the park");
+// myTodoList.create("Laudry");
+// myTodoList.create("gardenning");
+// myTodoList.create("go to the park");
 const lists = myTodoList.limitGetAll();
 // for (const iterator of lists) {
 //   console.log('list : '+iterator);
