@@ -79,11 +79,12 @@ class TodoList {
   }
 
   findByDate(date) {
-    const allItems = this.items
-    const result = allItems.find(element => element.date === date);
+    const allItems = this.items;
+    let result = allItems.find(element => element.date === date);
     // console.log('result '+result);
-
-
+    if(result === undefined||result===null){
+        result=[];
+    }
     // console.log(result)
     // console.log(allItems[1].id)
     // console.log("item length is: ", allItems.length)
